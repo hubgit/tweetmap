@@ -2,11 +2,14 @@
 
 <title>TweetMap</title>
 
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css">
 <style>html, body { height: 100%; margin: 0; padding: 0; }</style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
 <script src="services.js"></script>
+
 <script>
-$(Google.loadMapsAPI);
+$(Map.createMap);
 $(window).bind("hashchange", Twitter.timeline);
 </script>
