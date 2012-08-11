@@ -54,7 +54,7 @@ var Map = {
 		    if (!tweet.geo || !tweet.geo.coordinates) return;
 
 		    var marker = L.marker(tweet.geo.coordinates).addTo(map);
-		    marker.bindPopup(tweet.title);
+		    marker.bindPopup(tweet.text);
 
 		    bounds.extend(tweet.geo.coordinates);
 		});
