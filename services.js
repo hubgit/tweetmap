@@ -49,14 +49,14 @@ var Map = {
 		var bounds = new L.LatLngBounds;
 
 		data.forEach(function(tweet) {
-			earliest_id = tweet.id_str;
+		    earliest_id = tweet.id_str;
 
-			if (!tweet.geo || !tweet.geo.coordinates) return;
+		    if (!tweet.geo || !tweet.geo.coordinates) return;
 
 		    var marker = L.marker(tweet.geo.coordinates).addTo(map);
 		    marker.bindPopup(tweet.title);
 
-		    bounds.extend(point);
+		    bounds.extend(tweet.geo.coordinates);
 		});
 
 		map.fitBounds(bounds);
