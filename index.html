@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<title>TweetMap</title>
+
+<style>html, body { height: 100%; margin: 0; padding: 0; }</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="services.js"></script>
+<script>
+$(Google.loadMapsAPI);
+$(window).bind("hashchange", Twitter.timeline);
+</script>
